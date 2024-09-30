@@ -49,16 +49,19 @@ public class JobTest {
 
         Job job_five = new Job("Test Job", new Employer("Test Employer"), new Location("The Testing Place"), new PositionType("Test Tester"), new CoreCompetency("Testing Tests"));
 
-        String firstChar = String.valueOf(job_five.toString().charAt(0));
-        String lastChar = String.valueOf(job_five.toString().charAt(job_five.toString().length()-1));
+        String str = job_five.toString();
+        String firstChar = String.valueOf(str.substring(0, lineSeparator().length()));
+        String lastChar = String.valueOf(str.substring(str.length()-lineSeparator().length(), str.length()));
 
-        // Not sure why this alone didn't work
-        //assertEquals(lineSeparator(), firstChar);
-        //assertEquals(lineSeparator(), lastChar);
+        assertEquals(lineSeparator(), firstChar);
+        assertEquals(lineSeparator(), lastChar);
 
-        String nl = lineSeparator();
-        assertEquals(String.valueOf(nl.charAt(0)), firstChar);
-        assertEquals(String.valueOf(nl.charAt(nl.length()-1)), lastChar);
+    }
+
+    // It turns out a new line is 2 characters??
+    @Test
+    public void checkLengthOfLineSeparator() {
+        assertEquals(2, lineSeparator().length());
     }
 
     @Test
