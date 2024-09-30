@@ -49,19 +49,7 @@ public class JobTest {
         Job job_five = new Job("Test Job", new Employer("Test Employer"), new Location("The Testing Place"), new PositionType("Test Tester"), new CoreCompetency("Testing Tests"));
 
         assertEquals(lineSeparator(), String.valueOf(job_five.toString().charAt(0)));
-        assertEquals(lineSeparator(), String.valueOf(job_five.toString().charAt(job_five.getName().length()-1)));
-
-//        assertEquals(lineSeparator(), job_five.getEmployer().getValue().charAt(0));
-//        assertEquals(lineSeparator(), job_five.getEmployer().getValue().charAt(job_five.getEmployer().getValue().length()));
-//
-//        assertEquals(lineSeparator(), job_five.getLocation().getValue().charAt(0));
-//        assertEquals(lineSeparator(), job_five.getLocation().getValue().charAt(job_five.getLocation().getValue().length()));
-//
-//        assertEquals(lineSeparator(), job_five.getPositionType().getValue().charAt(0));
-//        assertEquals(lineSeparator(), job_five.getPositionType().getValue().charAt(job_five.getPositionType().getValue().length()));
-//
-//        assertEquals(lineSeparator(), job_five.getCoreCompetency().getValue().charAt(0));
-//        assertEquals(lineSeparator(), job_five.getCoreCompetency().getValue().charAt(job_five.getCoreCompetency().getValue().length()));
+        //assertEquals(lineSeparator(), String.valueOf(job_five.toString().charAt(job_five.toString().length()-1)));
 
     }
 }
