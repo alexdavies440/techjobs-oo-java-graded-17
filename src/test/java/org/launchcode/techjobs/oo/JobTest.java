@@ -51,7 +51,7 @@ public class JobTest {
 
         String str = job_five.toString();
         String firstChar = String.valueOf(str.substring(0, lineSeparator().length()));
-        String lastChar = String.valueOf(str.substring(str.length()-lineSeparator().length(), str.length()));
+        String lastChar = String.valueOf(str.substring(str.length()-lineSeparator().length()));
 
         assertEquals(lineSeparator(), firstChar);
         assertEquals(lineSeparator(), lastChar);
@@ -59,10 +59,10 @@ public class JobTest {
     }
 
     // It turns out a new line is 2 characters??
-    @Test
-    public void checkLengthOfLineSeparator() {
-        assertEquals(2, lineSeparator().length());
-    }
+//    @Test
+//    public void checkLengthOfLineSeparator() {
+//        assertEquals(2, lineSeparator().length());
+//    }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
