@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo;
 
+import com.sun.source.tree.AssertTree;
 import org.junit.Test;
 
 import static java.lang.System.lineSeparator;
@@ -48,8 +49,14 @@ public class JobTest {
 
         Job job_five = new Job("Test Job", new Employer("Test Employer"), new Location("The Testing Place"), new PositionType("Test Tester"), new CoreCompetency("Testing Tests"));
 
-        assertEquals(lineSeparator(), String.valueOf(job_five.toString().charAt(0)));
-        //assertEquals(lineSeparator(), String.valueOf(job_five.toString().charAt(job_five.toString().length()-1)));
+        String firstChar = String.valueOf(job_five.toString().charAt(0));
+        String lastChar = String.valueOf(job_five.toString().charAt(job_five.toString().length()-1));
+
+        //assertEquals(lineSeparator(), firstChar);
+        //assertEquals(lineSeparator(), lastChar);
+        String s = lineSeparator();
+        assertEquals(String.valueOf(s.charAt(0)), firstChar);
+        assertEquals(String.valueOf(s.charAt(s.length()-1)), lastChar);
 
     }
 }
