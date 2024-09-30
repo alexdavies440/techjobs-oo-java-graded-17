@@ -52,11 +52,17 @@ public class JobTest {
         String firstChar = String.valueOf(job_five.toString().charAt(0));
         String lastChar = String.valueOf(job_five.toString().charAt(job_five.toString().length()-1));
 
+        // Not sure why this alone didn't work
         //assertEquals(lineSeparator(), firstChar);
         //assertEquals(lineSeparator(), lastChar);
-        String s = lineSeparator();
-        assertEquals(String.valueOf(s.charAt(0)), firstChar);
-        assertEquals(String.valueOf(s.charAt(s.length()-1)), lastChar);
+
+        String nl = lineSeparator();
+        assertEquals(String.valueOf(nl.charAt(0)), firstChar);
+        assertEquals(String.valueOf(nl.charAt(nl.length()-1)), lastChar);
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
 
     }
 }
