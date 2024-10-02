@@ -51,7 +51,25 @@ public class Job {
 
     @Override
     public String toString() {
-        return lineSeparator() + "ID: " + id + lineSeparator() + "Name: " + name + lineSeparator() + "Employer: " + employer.getValue() + lineSeparator() + "Location: " + location.getValue() + lineSeparator() + "Position Type: " + positionType.getValue() + lineSeparator() + "Core Competency: " + coreCompetency.getValue() + lineSeparator();
+        if (name.equals("")) {
+            name = "Data not available";
+        }
+        if (employer.getValue().equals("")) {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue().equals("")) {
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue().equals("")) {
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().equals("")) {
+            coreCompetency.setValue("Data not available");
+        }
+        String str = lineSeparator() + "ID: " + id + lineSeparator() + "Name: " + name + lineSeparator() + "Employer: " + employer.getValue() + lineSeparator() + "Location: " + location.getValue() + lineSeparator() + "Position Type: " + positionType.getValue() + lineSeparator() + "Core Competency: " + coreCompetency.getValue() + lineSeparator();
+
+        //return str.replace("", "Data not available");
+        return str;
     }
 
 

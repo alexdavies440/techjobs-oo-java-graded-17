@@ -69,4 +69,13 @@ public class JobTest {
         String printResult = lineSeparator() + "ID: " + job_six.getId() + lineSeparator() + "Name: " + "Test Job" + lineSeparator() + "Employer: " + "Test Employer" + lineSeparator() + "Location: " + "The Testing Place" + lineSeparator() + "Position Type: " + "Test Tester" + lineSeparator() + "Core Competency: " + "Testing Tests" + lineSeparator();
         assertEquals(printResult, job_six.toString());
     }
+
+    @Test
+    public  void testToStringHandlesEmptyField() {
+        Job job_seven = new Job("", new Employer("Test Employer"), new Location("The Testing Place"), new PositionType("Test Tester"), new CoreCompetency("Testing Tests"));
+        String emptyResult = lineSeparator() + "ID: " + job_seven.getId() + lineSeparator() + "Name: " + "Data not available" + lineSeparator() + "Employer: " + "Test Employer" + lineSeparator() + "Location: " + "The Testing Place" + lineSeparator() + "Position Type: " + "Test Tester" + lineSeparator() + "Core Competency: " + "Testing Tests" + lineSeparator();
+
+        assertEquals(emptyResult, job_seven.toString());
+
+    }
 }
