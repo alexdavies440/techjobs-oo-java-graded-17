@@ -51,7 +51,7 @@ public class Job {
 
     @Override
     public String toString() {
-        return lineSeparator() + name + employer.getValue() + location.getValue() + positionType.getValue() + coreCompetency.getValue() + lineSeparator();
+        return lineSeparator() + "ID: " + id + lineSeparator() + "Name: " + name + lineSeparator() + "Employer: " + employer.getValue() + lineSeparator() + "Location: " + location.getValue() + lineSeparator() + "Position Type: " + positionType.getValue() + lineSeparator() + "Core Competency: " + coreCompetency.getValue() + lineSeparator();
     }
 
 
