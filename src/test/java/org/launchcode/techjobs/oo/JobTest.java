@@ -76,6 +76,5 @@ public class JobTest {
         String emptyResult = lineSeparator() + "ID: " + job_seven.getId() + lineSeparator() + "Name: " + "Data not available" + lineSeparator() + "Employer: " + "Test Employer" + lineSeparator() + "Location: " + "The Testing Place" + lineSeparator() + "Position Type: " + "Test Tester" + lineSeparator() + "Core Competency: " + "Testing Tests" + lineSeparator();
 
         assertEquals(emptyResult, job_seven.toString());
-
     }
 }
