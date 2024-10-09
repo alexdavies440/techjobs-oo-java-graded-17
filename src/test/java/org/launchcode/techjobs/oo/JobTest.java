@@ -57,12 +57,6 @@ public class JobTest {
         assertEquals(lineSeparator(), lastChar);
     }
 
-    // It turns out a new line is 2 characters??
-//    @Test
-//    public void checkLengthOfLineSeparator() {
-//        assertEquals(2, lineSeparator().length());
-//    }
-
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
         Job job_six = new Job("Test Job", new Employer("Test Employer"), new Location("The Testing Place"), new PositionType("Test Tester"), new CoreCompetency("Testing Tests"));

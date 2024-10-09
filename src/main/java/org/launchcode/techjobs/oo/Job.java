@@ -68,7 +68,6 @@ public class Job {
         }
         String str = lineSeparator() + "ID: " + id + lineSeparator() + "Name: " + name + lineSeparator() + "Employer: " + employer.getValue() + lineSeparator() + "Location: " + location.getValue() + lineSeparator() + "Position Type: " + positionType.getValue() + lineSeparator() + "Core Competency: " + coreCompetency.getValue() + lineSeparator();
 
-        //return str.replace("", "Data not available");
         return str;
     }
 
