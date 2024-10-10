@@ -66,7 +66,14 @@ public class Job {
         if (coreCompetency.getValue().equals("")) {
             coreCompetency.setValue("Data not available");
         }
-        String str = lineSeparator() + "ID: " + id + lineSeparator() + "Name: " + name + lineSeparator() + "Employer: " + employer.getValue() + lineSeparator() + "Location: " + location.getValue() + lineSeparator() + "Position Type: " + positionType.getValue() + lineSeparator() + "Core Competency: " + coreCompetency.getValue() + lineSeparator();
+        String str =
+                lineSeparator() + "ID: " + id +
+                lineSeparator() + "Name: " + name +
+                lineSeparator() + "Employer: " + employer.getValue() +
+                lineSeparator() + "Location: " + location.getValue() +
+                lineSeparator() + "Position Type: " + positionType.getValue() +
+                lineSeparator() + "Core Competency: " + coreCompetency.getValue() +
+                lineSeparator();
 
         return str;
     }
